@@ -43,6 +43,18 @@ antd
 #### 服务器代理
 webpackDevServer.config.js
 1. 找到 proxy
+2. 设置
+```js
+proxy:{
+  '/api':{
+    target:'http://www.baidu.com',  //设置目标路径
+    changeOrigin:true,              //是否允许改变源
+    pathRewrite:{
+      '^/api':''                     //标识符替换
+    }
+  }
+}
+```
 
 
 ### 共有库
