@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './test.less'
 function App() {
   return (
-    <div>app</div>
+    <div className="red">app</div>
   );
 }
 
