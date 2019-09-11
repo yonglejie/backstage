@@ -58,7 +58,13 @@ proxy:{
 
 
 ### 共有库
-axios 二次封装 
+#### axios 二次封装 
+- npm install axios
+- npm 官网 查看 axios 拦截器
+- utils > axios.js 将拦截器的代码黏贴
+- 在axios.js 引入axios ,并抛出 axios
+- 在index.js 引入, 挂载在 React 的 Component 原型上
+
 路由
 react-redux
 
@@ -72,3 +78,7 @@ react-redux
    - yarn 和 npm 的区别
       1. 下载过的会保存在缓存
       2. npm 初始化安装后, 可以使用yarn, 反之则不行
+
+5. 起别名, 服务器代理 
+6. axios 二次封装
+7. 
