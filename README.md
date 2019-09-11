@@ -36,10 +36,12 @@ antd
 #### 起别名
 - webpack.config.js 
 - 全局搜索 alias
-
+- 设置的例子 `'style':path.join(__dirname,'../src/style'),`
+- 设置的例子 `'style':path.resolve(__dirname,'../src/style'),`
+- 设置完成后进行测试
 
 #### 服务器代理
-webpack.config.js
+webpackDevServer.config.js
 1. 找到 proxy
 
 
