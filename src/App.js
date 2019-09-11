@@ -1,8 +1,11 @@
 import React from 'react';
-import './test.less'
+import {Button} from 'antd'
+
 function App() {
   return (
-    <div className="red">app</div>
+    <div className="red">
+     <Button type="danger">hehe</Button>     
+    </div>
   );
 }
 
