@@ -7,6 +7,7 @@ function App(props) {
     <div >
       123
      {props.children}
+     <Button>123</Button>
     </div>
   );
 }

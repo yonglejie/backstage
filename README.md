@@ -33,7 +33,31 @@ antd
 - 需要一个插件, 需要在 antd 官网获取
 - 官网在 `create-react-app` 中使用查找 `使用 babel-plugin-import `
 - 安装 `npm install babel-plugin-import`
-- 
+- 配置
+  - 在 `webpack.config.js`里 搜索 `babel-loader` , 查找配置项中的 `plugins` 项
+  - 在 `plugins` 项中加一句话, `['import',{'libraryName':'antd','style':true}],`
+  - 具体配置原因可以在 npm 的配置项中查看
+```jsx
+//设置局部引入
+plugins: [
+  ['import',{'libraryName':'antd','style':true}],
+  [
+    require.resolve('babel-plugin-named-asset-import'),
+    {
+      loaderMap: {
+        svg: {
+          ReactComponent:
+            '@svgr/webpack?-svgo,+titleProp,+ref![path]',
+        },
+      },
+    },
+  ],
+],
+```
+
+- 配置完成后将全局引入的css文件去掉,进行测试, 测试成功后就可以使用了
+- 版本问题: 可能因为`antd` 使用的less版本低于 less官方最新版本, 所以应该安装与`antd` 使用的less相同的版本
+
 
 ### 基本配置
 
