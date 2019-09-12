@@ -22,14 +22,18 @@ less
 
 ### UI框架
 antd
-
-按需引入  线上环境一定要按需引入
 用的时候找官方文档 在 `create-react-app` 中使用
 
 安装 `npm install antd`
 
 全局引入
 - 在 index.js 引入样式 `import "antd/dist/antd.css"`  
+- 
+按需引入  线上环境一定要按需引入
+- 需要一个插件, 需要在 antd 官网获取
+- 官网在 `create-react-app` 中使用查找 `使用 babel-plugin-import `
+- 安装 `npm install babel-plugin-import`
+- 
 
 ### 基本配置
 
@@ -65,9 +69,20 @@ proxy:{
 - 在axios.js 引入axios ,并抛出 axios
 - 在index.js 引入, 挂载在 React 的 Component 原型上
 
-路由
-react-redux
+#### 路由
+- npm install react-router-dom
+- src 目录下 设置 router.js 文件
 
+
+
+
+#### react-redux
+使用
+- store 文件夹
+  1. store.js
+  2. state.js
+  3. reducer.js
+  4. actionCreator.js
 
 ## 步骤
 ### 起步
@@ -81,4 +96,31 @@ react-redux
 
 5. 起别名, 服务器代理 
 6. axios 二次封装
-7. 
+7. 路由文件
+
+
+### 组员开发
+- git clone 
+- 切到dev分支 再从 dev 分支分一个demo分支
+
+#### pages设置
+```
+pages 
+├── admin
+│   ├── index.js
+│   └── index.less
+├── login
+│   ├── index.js
+│
+│
+│
+  制表符  ├  │  └  ─
+```
+
+
+
+
+
+
+### 注事项
+1. npm node 版本号保持一致

@@ -1,10 +1,12 @@
 import React from 'react';
 import {Button} from 'antd'
 import 'style/test.less';
-function App() {
+function App(props) {
+  console.log(props)
   return (
-    <div className="red">
-     <Button type="danger">hehe</Button>     
+    <div >
+      123
+     {props.children}
     </div>
   );
 }
