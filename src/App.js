@@ -1,15 +1,16 @@
-import React from 'react';
-import {Button} from 'antd'
+import React,{Component} from 'react';
 import 'style/test.less';
-function App(props) {
-  console.log(props)
-  return (
-    <div >
-      123
-     {props.children}
-     <Button>123</Button>
-    </div>
-  );
+class App extends Component{
+  constructor(){
+    super()
+  }
+  render(){
+    return (
+      <div >
+       {this.props.children} 
+      </div>
+    )
+  }
 }
 
-export default App;
+export default (App);
